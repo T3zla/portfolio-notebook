@@ -1,0 +1,232 @@
+[
+  {
+    "id": "health",
+    "title": "Health & Physical Fitness",
+    "description": "",
+    "questions": [
+      {
+        "id": "health-final-1",
+        "text": "Enjoys swimming"
+      },
+      {
+        "id": "health-final-2",
+        "text": "Runs, jumps and plays with good control"
+      },
+      {
+        "id": "health-final-3",
+        "text": "Willing to try new physical activities"
+      },
+      {
+        "id": "health-final-4",
+        "text": "Enjoys PE lessons"
+      },
+      {
+        "id": "health-final-5",
+        "text": "Arrives at school in a happy mood"
+      },
+      {
+        "id": "health-final-6",
+        "text": "Maintains a stable mood throughout the day"
+      }
+    ]
+  },
+  {
+    "id": "habits",
+    "title": "Habits & Self-Care",
+    "description": "",
+    "questions": [
+      {
+        "id": "habits-final-1",
+        "text": "Manages daily routines independently"
+      },
+      {
+        "id": "habits-final-2",
+        "text": "Gets ready quickly after nap"
+      },
+      {
+        "id": "habits-final-3",
+        "text": "Finishes meals on time"
+      },
+      {
+        "id": "habits-final-4",
+        "text": "Tidies up personal belongings"
+      },
+      {
+        "id": "habits-final-5",
+        "text": "Concentrates on classroom activities"
+      },
+      {
+        "id": "habits-final-6",
+        "text": "Follows classroom instructions"
+      },
+      {
+        "id": "habits-final-7",
+        "text": "Cleans up and organises after playtime"
+      },
+      {
+        "id": "habits-final-8",
+        "text": "Manages personal hygiene independently"
+      }
+    ]
+  },
+  {
+    "id": "social",
+    "title": "Socialisation",
+    "description": "",
+    "questions": [
+      {
+        "id": "social-final-1",
+        "text": "Has a variety of friends"
+      },
+      {
+        "id": "social-final-2",
+        "text": "Has a stable group of friends"
+      },
+      {
+        "id": "social-final-3",
+        "text": "Works in small groups and shares ideas"
+      },
+      {
+        "id": "social-final-4",
+        "text": "Manages disagreements with others"
+      },
+      {
+        "id": "social-final-5",
+        "text": "Shows confidence in group activities"
+      },
+      {
+        "id": "social-final-6",
+        "text": "Shares resources appropriately"
+      },
+      {
+        "id": "social-final-7",
+        "text": "Helps and shows kindness to classmates"
+      }
+    ]
+  },
+  {
+    "id": "language",
+    "title": "Language & Communication",
+    "description": "",
+    "questions": [
+      {
+        "id": "language-final-1",
+        "text": "Enjoys stories during circle time"
+      },
+      {
+        "id": "language-final-2",
+        "text": "Participates in classroom discussions"
+      },
+      {
+        "id": "language-final-3",
+        "text": "Raises hand to answer questions"
+      },
+      {
+        "id": "language-final-4",
+        "text": "Speaks English with teachers and classmates"
+      },
+      {
+        "id": "language-final-5",
+        "text": "Understands questions about stories"
+      },
+      {
+        "id": "language-final-6",
+        "text": "Enjoys looking at and reading books"
+      },
+      {
+        "id": "language-final-7",
+        "text": "Participates in Story Month activities"
+      }
+    ]
+  },
+  {
+    "id": "inquiry",
+    "title": "Inquiry & Cognition",
+    "description": "",
+    "questions": [
+      {
+        "id": "inquiry-final-1",
+        "text": "Shows curiosity about classroom topics"
+      },
+      {
+        "id": "inquiry-final-2",
+        "text": "Asks questions to learn more"
+      },
+      {
+        "id": "inquiry-final-3",
+        "text": "Enjoys exploring new things"
+      },
+      {
+        "id": "inquiry-final-4",
+        "text": "Can sort objects by size, colour or shape"
+      },
+      {
+        "id": "inquiry-final-5",
+        "text": "Understands classroom topics"
+      },
+      {
+        "id": "inquiry-final-6",
+        "text": "Can count and recognise numbers"
+      },
+      {
+        "id": "inquiry-final-7",
+        "text": "Can compare quantities and recognise patterns"
+      },
+      {
+        "id": "inquiry-final-8",
+        "text": "Enjoys puzzles and construction activities"
+      },
+      {
+        "id": "inquiry-final-9",
+        "text": "Can solve problems independently"
+      }
+    ]
+  },
+  {
+    "id": "beauty",
+    "title": "Beauty & Performance",
+    "description": "",
+    "questions": [
+      {
+        "id": "beauty-final-1",
+        "text": "Enjoys drawing, colouring, painting and crafts"
+      },
+      {
+        "id": "beauty-final-2",
+        "text": "Shows creativity in artwork"
+      },
+      {
+        "id": "beauty-final-3",
+        "text": "Tries different colours and materials"
+      },
+      {
+        "id": "beauty-final-4",
+        "text": "Takes pride in completed artwork"
+      },
+      {
+        "id": "beauty-final-5",
+        "text": "Works carefully on art projects"
+      },
+      {
+        "id": "beauty-final-6",
+        "text": "Enjoys singing classroom songs"
+      },
+      {
+        "id": "beauty-final-7",
+        "text": "Participates in music and movement activities"
+      },
+      {
+        "id": "beauty-final-8",
+        "text": "Participates in dancing and performances"
+      },
+      {
+        "id": "beauty-final-9",
+        "text": "Can remember songs and dance movements"
+      },
+      {
+        "id": "beauty-final-10",
+        "text": "Enjoys imaginative play and acting out stories"
+      }
+    ]
+  }
+]

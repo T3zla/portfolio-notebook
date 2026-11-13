@@ -1,0 +1,253 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Portfolio Notebook JSON export",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "period": {
+      "type": "string"
+    },
+    "classes": {
+      "type": "array",
+      "maxItems": 100,
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string"
+          },
+          "students": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/student"
+            }
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "students"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "updatedAt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "questionBank": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "items": {
+        "$ref": "#/$defs/area"
+      }
+    },
+    "exportedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "questionSetVersion": {
+      "const": 2
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "period",
+    "classes",
+    "updatedAt",
+    "questionBank",
+    "exportedAt",
+    "questionSetVersion"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "student": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string"
+        },
+        "gender": {
+          "enum": [
+            "girl",
+            "boy",
+            null
+          ]
+        },
+        "notes": {
+          "type": "string"
+        },
+        "areaNotes": {
+          "type": "object",
+          "properties": {
+            "health": {
+              "type": "string"
+            },
+            "habits": {
+              "type": "string"
+            },
+            "social": {
+              "type": "string"
+            },
+            "language": {
+              "type": "string"
+            },
+            "inquiry": {
+              "type": "string"
+            },
+            "beauty": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "responses": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/response"
+          }
+        },
+        "previousResponses": {
+          "type": "array",
+          "description": "Archived earlier questions and observations. Do not treat these as answers to the current question bank.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "archivedAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "questionBank": {
+                "type": "array",
+                "minItems": 6,
+                "maxItems": 6,
+                "items": {
+                  "$ref": "#/$defs/area"
+                }
+              },
+              "responses": {
+                "type": "object",
+                "additionalProperties": {
+                  "$ref": "#/$defs/response"
+                }
+              }
+            },
+            "required": [
+              "archivedAt",
+              "questionBank",
+              "responses"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "gender",
+        "notes",
+        "areaNotes",
+        "responses",
+        "previousResponses"
+      ],
+      "additionalProperties": false
+    },
+    "response": {
+      "type": "object",
+      "properties": {
+        "answer": {
+          "enum": [
+            "Yes",
+            "No",
+            "Sometimes",
+            "With reminders",
+            "With help",
+            "Not sure",
+            "N/A",
+            null
+          ]
+        },
+        "note": {
+          "type": "string"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "excellent": {
+          "type": "boolean",
+          "description": "Teacher marked this specific skill as excellent / above standard. Independent of the answer."
+        }
+      },
+      "required": [
+        "answer",
+        "note"
+      ],
+      "additionalProperties": false
+    },
+    "area": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "enum": [
+            "health",
+            "habits",
+            "social",
+            "language",
+            "inquiry",
+            "beauty"
+          ]
+        },
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "questions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "text": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "id",
+              "text"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "description",
+        "questions"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$comment": "Area IDs and question IDs are unique. Each response key must match a question ID in questionBank. Unanswered questions may be omitted from responses; an answer of null also means unanswered. Student and class IDs are unique across the export. These cross-record constraints are checked by the app."
+}
